@@ -11,7 +11,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "parse": "tsx scripts/parse-fixture.ts",
+    "qa:slips": "tsx scripts/qa-slips.ts",
     "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@slipsheet/parse": "*",
+    "@slipsheet/schema": "*"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",

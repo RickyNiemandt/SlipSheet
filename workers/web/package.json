@@ -8,6 +8,8 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
+    "@slipsheet/money": "*",
+    "@slipsheet/schema": "*",
     "@slipsheet/sheets": "*"
   },
   "devDependencies": {

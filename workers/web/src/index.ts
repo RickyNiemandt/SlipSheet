@@ -1,7 +1,10 @@
+import { formatCentsAsZar } from "@slipsheet/money";
+import { ParsedReceipt, toSheetRow } from "@slipsheet/schema";
 import {
   buildAuthUrl,
   exchangeCodeForTokens,
   getUserEmail,
+  sheetRowsToCsv,
   type StoredUserTokens,
 } from "@slipsheet/sheets";
 
@@ -52,6 +55,41 @@ export default {
       );
 
       return Response.redirect(buildAuthUrl(oauth, state), 302);
+    }
+
+    if (url.pathname === "/export.csv" && request.method === "POST") {
+      let body: unknown;
+      try {
+        body = await request.json();
+      } catch {
+        return new Response("Invalid JSON body", { status: 400 });
+      }
+
+      const payload = body as {
+        receipt?: unknown;
+        messageId?: string;
+        contentHash?: string;
+      };
+
+      const parsed = ParsedReceipt.safeParse(payload.receipt);
+      if (!parsed.success) {
+        return new Response("Invalid receipt payload", { status: 400 });
+      }
+
+      const row = toSheetRow({
+        receipt: parsed.data,
+        ingestedAt: new Date().toISOString(),
+        messageId: payload.messageId ?? "manual-export",
+        contentHash: payload.contentHash ?? "manual",
+        formatZar: formatCentsAsZar,
+      });
+
+      return new Response(sheetRowsToCsv([row]), {
+        headers: {
+          "Content-Type": "text/csv; charset=utf-8",
+          "Content-Disposition": 'attachment; filename="slipsheet-export.csv"',
+        },
+      });
     }
 
     if (url.pathname === "/oauth/callback") {

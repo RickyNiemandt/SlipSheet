@@ -192,7 +192,7 @@ ${MINIMAL_PNG_BASE64}
       tax_cents: { value: null, confidence: 0.1 },
       total_cents: { value: null, confidence: 0.15 },
       line_items: [],
-      warnings: ["low_image_quality"],
+      warnings: ["low_image_quality", "total_not_visible"],
     },
   };
 

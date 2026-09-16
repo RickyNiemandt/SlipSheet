@@ -75,14 +75,21 @@ cd workers/web && npx wrangler deploy
 4. **Ephemeral** file handling — process in memory, append to Sheet, discard
 5. No WhatsApp in v1
 
-## QA
+## QA (M5)
 
 ```bash
-npm test                    # unit + golden + anti-hallucination
-npm run parse -- fixtures/… # live Gemini (optional)
+npm test          # unit + golden + anti-hallucination (CI)
+npm run qa:slips  # M5 sign-off table (offline always; live if GEMINI_API_KEY set)
+npm run parse -- fixtures/pdf/pdf-invoice-supplier-a.pdf
 ```
 
-Golden fixtures in `fixtures/golden/` define expected shapes. Adversarial fixtures must keep `total_cents` null after normalize.
+Replace placeholder photos in `fixtures/photos/` with real redacted SA till slips before final M5 live sign-off.
+
+## Deploy (M6)
+
+Full step-by-step: **[docs/DEPLOY.md](docs/DEPLOY.md)** — Cloudflare KV, Email Routing, Google OAuth, worker secrets.
+
+**CSV fallback** (no Sheet connected): POST parsed receipt JSON to `/export.csv` on the web worker.
 
 ## Environment variables
 

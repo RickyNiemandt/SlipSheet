@@ -23,6 +23,7 @@
   },
   "line_items": [],
   "warnings": [
-    "low_image_quality"
+    "low_image_quality",
+    "total_not_visible"
   ]
 }
