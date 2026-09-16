@@ -1,0 +1,22 @@
+{
+  "name": "@slipsheet/worker-intake-email",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@slipsheet/email-intake": "*",
+    "@slipsheet/money": "*",
+    "@slipsheet/parse": "*",
+    "@slipsheet/schema": "*",
+    "@slipsheet/sheets": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250317.0",
+    "wrangler": "^4.0.0"
+  }
+}

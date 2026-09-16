@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "vendor": {
+    "value": "Cape Stationers CC",
+    "confidence": 0.9
+  },
+  "invoice_date": {
+    "value": "2026-01-22",
+    "confidence": 0.88
+  },
+  "currency": "ZAR",
+  "subtotal_cents": {
+    "value": 100000,
+    "confidence": 0.85
+  },
+  "tax_cents": {
+    "value": 15000,
+    "confidence": 0.85
+  },
+  "total_cents": {
+    "value": 115000,
+    "confidence": 0.92
+  },
+  "line_items": [],
+  "warnings": []
+}

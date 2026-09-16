@@ -1,0 +1,15 @@
+name = "slipsheet-web"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "USERS"
+id = "00000000000000000000000000000001"
+
+[[kv_namespaces]]
+binding = "OAUTH_STATE"
+id = "00000000000000000000000000000002"
+
+[vars]
+APP_URL = "https://slipsheet.example.com"

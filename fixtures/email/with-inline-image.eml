@@ -1,0 +1,20 @@
+From: phone@example.com
+To: inbox@slipsheet.test
+Subject: Till slip photo
+Message-ID: <fixture-inline@slipsheet.test>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="boundary99"
+
+--boundary99
+Content-Type: text/html; charset=utf-8
+
+<html><body><img src="cid:slip1"></body></html>
+
+--boundary99
+Content-Type: image/png; name="slip.png"
+Content-Disposition: inline
+Content-Transfer-Encoding: base64
+Content-ID: <slip1>
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==
+--boundary99--

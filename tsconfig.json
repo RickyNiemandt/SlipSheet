@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/schema" },
+    { "path": "./packages/money" },
+    { "path": "./packages/email-intake" },
+    { "path": "./packages/parse" },
+    { "path": "./packages/sheets" }
+  ]
+}

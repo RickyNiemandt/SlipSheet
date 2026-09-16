@@ -1,0 +1,15 @@
+name = "slipsheet-intake-email"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "IDEMPOTENCY"
+id = "00000000000000000000000000000000"
+
+[[kv_namespaces]]
+binding = "USERS"
+id = "00000000000000000000000000000001"
+
+[vars]
+STATUS_URL = "https://slipsheet.example.com"

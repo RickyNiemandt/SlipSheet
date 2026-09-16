@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "vendor": {
+    "value": "Unknown Store",
+    "confidence": 0.5
+  },
+  "invoice_date": {
+    "value": null,
+    "confidence": 0.3
+  },
+  "currency": "ZAR",
+  "subtotal_cents": {
+    "value": null,
+    "confidence": 0.2
+  },
+  "tax_cents": {
+    "value": null,
+    "confidence": 0.2
+  },
+  "total_cents": {
+    "value": null,
+    "confidence": 0.25
+  },
+  "line_items": [],
+  "warnings": [
+    "total_not_visible"
+  ]
+}

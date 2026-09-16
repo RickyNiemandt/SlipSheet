@@ -1,0 +1,1 @@
+- [ ] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — email-only intake; awaiting **go** to implement M1

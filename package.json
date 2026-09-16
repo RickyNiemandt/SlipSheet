@@ -1,0 +1,26 @@
+{
+  "name": "slipsheet",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "workers/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @slipsheet/schema && npm run build -w @slipsheet/money && npm run build -w @slipsheet/email-intake && npm run build -w @slipsheet/parse && npm run build -w @slipsheet/sheets",
+    "generate:fixtures": "tsx scripts/generate-fixtures.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "parse": "tsx scripts/parse-fixture.ts",
+    "typecheck": "tsc -b"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "postal-mime": "^2.4.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

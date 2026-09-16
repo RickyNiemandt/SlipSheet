@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "vendor": {
+    "value": "Checkers",
+    "confidence": 0.85
+  },
+  "invoice_date": {
+    "value": "2026-03-01",
+    "confidence": 0.75
+  },
+  "currency": "ZAR",
+  "subtotal_cents": {
+    "value": null,
+    "confidence": 0.3
+  },
+  "tax_cents": {
+    "value": null,
+    "confidence": 0.2
+  },
+  "total_cents": {
+    "value": 45678,
+    "confidence": 0.82
+  },
+  "line_items": [],
+  "warnings": []
+}
