@@ -1,1 +1,3 @@
-- [ ] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — email-only intake; awaiting **go** to implement M1
+- [x] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — M1–M4 on `main` (baceaab); 26 tests passing
+- [ ] M5 QA — 5 real SA slips with live Gemini
+- [ ] M6 deploy — Cloudflare KV + Email Routing + Google OAuth
