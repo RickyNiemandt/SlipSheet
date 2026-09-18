@@ -1,3 +1,4 @@
-- [x] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — M1–M4 on `main` (baceaab); 26 tests passing
-- [ ] M5 QA — 5 real SA slips with live Gemini
-- [ ] M6 deploy — Cloudflare KV + Email Routing + Google OAuth
+- [x] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — M1–M6 code complete; 3-agent QC done (`85020fa`)
+- [x] QC reports — [packages](docs/review/packages-qc.md), [workers](docs/review/workers-qc.md), [integration](docs/review/integration-qc.md); flow doc: [FLOW.md](docs/FLOW.md)
+- [ ] Live deploy — KV IDs, domain, Email Routing ([DEPLOY.md](docs/DEPLOY.md))
+- [ ] M5 live sign-off — real SA photo fixtures + `GEMINI_API_KEY`
