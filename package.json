@@ -6,7 +6,7 @@
     "workers/*"
   ],
   "scripts": {
-    "build": "npm run build -w @slipsheet/schema && npm run build -w @slipsheet/money && npm run build -w @slipsheet/email-intake && npm run build -w @slipsheet/parse && npm run build -w @slipsheet/sheets",
+    "build": "tsc -b --force",
     "generate:fixtures": "tsx scripts/generate-fixtures.ts",
     "test": "vitest run",
     "test:watch": "vitest",

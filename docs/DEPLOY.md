@@ -2,6 +2,8 @@
 
 Step-by-step to get email intake live on Cloudflare with Google Sheets.
 
+For the full application flow (what happens on duplicate, unknown sender, missing attachment, low confidence), see **[FLOW.md](FLOW.md)**.
+
 ## Prerequisites
 
 - Cloudflare account with a domain (DNS on Cloudflare)

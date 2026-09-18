@@ -22,13 +22,24 @@ workers/web           OAuth connect + minimal status UI
 fixtures/             Sample PDFs, photos, .eml, golden JSON
 ```
 
+## How it works
+
+End-to-end flow (email → parse → Sheet → reply): **[docs/FLOW.md](docs/FLOW.md)**
+
 ## Quick start (development)
 
 ```bash
 npm install
-npm run generate:fixtures
+npm run generate:fixtures   # synthetic PDFs/photos + golden JSON (required before tests)
 npm run build
 npm test
+npm run qa:slips            # M5 anti-hallucination sign-off (offline in CI)
+```
+
+Full local QC (matches CI):
+
+```bash
+npm install && npm run generate:fixtures && npm run build && npm test && npm run qa:slips
 ```
 
 Parse a fixture (requires `GEMINI_API_KEY`):
@@ -87,7 +98,8 @@ Replace placeholder photos in `fixtures/photos/` with real redacted SA till slip
 
 ## Deploy (M6)
 
-Full step-by-step: **[docs/DEPLOY.md](docs/DEPLOY.md)** — Cloudflare KV, Email Routing, Google OAuth, worker secrets.
+- **Architecture & edge cases:** [docs/FLOW.md](docs/FLOW.md)
+- **Step-by-step deploy:** [docs/DEPLOY.md](docs/DEPLOY.md) — Cloudflare KV, Email Routing, Google OAuth, worker secrets
 
 **CSV fallback** (no Sheet connected): POST parsed receipt JSON to `/export.csv` on the web worker.
 
