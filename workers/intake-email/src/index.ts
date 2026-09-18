@@ -1,6 +1,7 @@
 import { extractSlipFromEmail } from "@slipsheet/email-intake";
 import type { IntakeMeta } from "@slipsheet/schema";
-import { KvIdempotencyStore, KvUserStore, PipelineError, runPipeline } from "./pipeline.js";
+import { KvIdempotencyStore } from "./idempotency.js";
+import { KvUserStore, PipelineError, runPipeline } from "./pipeline.js";
 import {
   buildConfirmReply,
   buildDuplicateReply,
