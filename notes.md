@@ -1,4 +1,3 @@
-- [x] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — M1–M6 code complete; 3-agent QC done (`85020fa`)
-- [x] QC reports — [packages](docs/review/packages-qc.md), [workers](docs/review/workers-qc.md), [integration](docs/review/integration-qc.md); flow doc: [FLOW.md](docs/FLOW.md)
-- [ ] Live deploy — KV IDs, domain, Email Routing ([DEPLOY.md](docs/DEPLOY.md))
+- [x] [SlipSheet v1 Plan](/opt/cursor/artifacts/plans/slipsheet_v1_plan_0827902a.plan.md) — code complete; 5-agent QC + [River handover](docs/HANDOVER-RIVER.md) on `main` (`e8112df`)
+- [ ] River — P0 deploy ([DEPLOY.md](docs/DEPLOY.md)): KV, domain, Email Routing, OAuth, E2E smoke
 - [ ] M5 live sign-off — real SA photo fixtures + `GEMINI_API_KEY`
