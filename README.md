@@ -22,6 +22,10 @@ workers/web           OAuth connect + minimal status UI
 fixtures/             Sample PDFs, photos, .eml, golden JSON
 ```
 
+## Handover (new engineer)
+
+**[docs/HANDOVER-RIVER.md](docs/HANDOVER-RIVER.md)** — what's done, what's left, and section QC reports.
+
 ## How it works
 
 End-to-end flow (email → parse → Sheet → reply): **[docs/FLOW.md](docs/FLOW.md)**
